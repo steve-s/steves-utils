@@ -1,0 +1,3 @@
+Resizes all the images in current folder to given percentage (maintains aspect ratio)
+Usage: resize [percentage] [file-pattern]
+Example: resize 40 *.JPG
