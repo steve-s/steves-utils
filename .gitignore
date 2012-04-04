@@ -1,0 +1,10 @@
+
+# folders with compiled files
+*/bin/*
+*/obj/*
+*/_*/*
+
+# user releated files
+*.user
+*.gpState
+*.suo
