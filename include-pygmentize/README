@@ -1,0 +1,32 @@
+Alternative to minted (http://code.google.com/p/minted/) that allows you to 
+easily include pygments (http://pygments.org/) output in your latex files.
+
+Syntax is following:
+
+%----------------
+%in preamble:
+
+%pygmentize_options: -O style=vs
+
+%----------------
+%anywhere in your latex source:
+
+%pygmentize_begin csharp
+% class Immutable {
+%   public string Name { get; private set; }
+% }
+%pygmentize_end
+
+Latex file with these special comments can be then processed by 
+include-pygmentize.exe and a new file with pygmentize output will be produced 
+(but it will still contain the comments).
+
+
+Differences from Minted:
+	+ it is not needed to run pygmentize everytime you compile your latex file, 
+		if you don't change source code listings
+	+ it seems to be faster
+	+ the latex source is not dependent on include-pygmentize.exe, only 
+		editing of source code listings will be bit difficult
+	- it does not support as advanced options as Minted does
+	- it is not as easy to use
