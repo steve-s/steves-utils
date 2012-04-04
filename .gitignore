@@ -1,8 +1,12 @@
 
 # folders with compiled files
-*/bin/*
-*/obj/*
-*/_*/*
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+_*/
 
 # user releated files
 *.user
