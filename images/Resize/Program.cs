@@ -13,7 +13,9 @@ namespace Resize
 		{
 			int percentage;
 			if (args.Length < 1 || int.TryParse(args[0], out percentage) == false) {
-				Console.WriteLine("Wrong arguments\nusage: resize [percentage]\nexample: resize 40");
+				Console.WriteLine("Wrong arguments");
+				Console.WriteLine("usage: resize [percentage] [file-pattern]");
+				Console.WriteLine("example: resize 40 *.JPG");
 				return;
 			}
 
