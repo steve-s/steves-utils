@@ -1,2 +1,13 @@
-This is just a set of utilities that I use myself. 
-If you find any of them useful, you're free to download and use them.
+This utility can
+
+1) compare (diff) API exposed by two .NET assemblies and produce report 
+on which types/methods are missing in one or the other.
+
+2) seach .NET assembly for methods that instantiate NotImplementedException.
+
+Usage:
+API differences: apicmp [-all] assembly1 assembly2
+Seek NotImplementedExceptions: apicmp [-all] assembly
+
+With -all option, the program takes into account even private and 
+internal types and methods.
