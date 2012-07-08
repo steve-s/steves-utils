@@ -1,8 +1,8 @@
-Takes a visual studio 2010 solution and produces a DOT file describing a graph 
+Takes a visual studio 2010 solution and produces a DOT file describing the graph 
 of dependencies of all the visual studio 2010 project files included in 
 the solution.
 
 This DOT file can be then processed by GraphViz to generate "visually pleasing" 
 graph of all the dependencies.
 
-No need to build the solution.
+No need to build the solution that is being analyzed.
