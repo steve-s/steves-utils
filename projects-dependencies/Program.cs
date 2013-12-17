@@ -14,7 +14,7 @@ namespace ProjectsDependencies
 
 		public static void Main(string[] args)
 		{
-			if (args.Length == 1) {
+			if (args.Length == 0) {
 				Console.WriteLine("Unexpected number of arguments");
 				Console.WriteLine("Usage: proj-dep solution-file [-skip-tests]");
 				Console.WriteLine("With -skip-tests all projects with a substring 'Test' in their name are skipped");

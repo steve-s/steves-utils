@@ -81,8 +81,8 @@ namespace ApiComparator
 				Console.WriteLine("Differences in methods: ");
 				foreach (var method in methodsDiff) {
 					Console.WriteLine(
-						"Method {0} in type {1}, defined in {2}.", 
-						method.Name, 
+						"{1}.{0}, defined in {2}.",
+						GetMethodSignature(method), 
 						method.DeclaringType.FullName,
 						GetFileName(method.Module));
 				}
@@ -104,7 +104,7 @@ namespace ApiComparator
 
 			if (methods.Any()) {
 				foreach (var method in methods) {
-					Console.WriteLine("{0}.{1}", method.DeclaringType.FullName, method.Name);
+					Console.WriteLine("{0}.{1}", method.DeclaringType.FullName, GetMethodSignature(method));
 				}
 			} else {
 				Console.WriteLine("No methods instantiating NotImplementedException were found");
@@ -143,6 +143,11 @@ namespace ApiComparator
 			} else {
 				return arguments[1];
 			}
+		}
+
+		private static string GetMethodSignature(MethodDefinition m)
+		{
+			return m.Name + "(" + string.Join(", ", m.Parameters.Select(x => x.ParameterType.Name)) + ")";
 		}
 
 		private class LambdaComparer<T> : IEqualityComparer<T> {
